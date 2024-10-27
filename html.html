@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive JavaScript Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="auth-section">
+    <h2>Welcome to the Quiz</h2>
+    <label for="username">Enter Username:</label>
+    <input type="text" id="username" required>
+    <button onclick="authenticate()">Login</button>
+</div>
+
+<div id="quiz-section" style="display: none;">
+    <h2>JavaScript Quiz</h2>
+    <form id="quiz-form">
+      <div class="question">
+        <p>Question 1: What does HTML stand for?</p>
+        <input type="radio" name="q1" value="0"> Hyperlinks and Text Markup Language<br>
+        <input type="radio" name="q1" value="1"> Hypertext Markup Language<br>
+        <input type="radio" name="q1" value="0"> Home Tool Markup Language<br>
+      </div>
+      <button type="button" onclick="checkAnswer()">Submit Answer</button>
+    </form>
+    <p id="feedback"></p>
+    <button onclick="nextQuestion()" style="display: none;">Next</button>
+    <p>Score: <span id="score">0</span></p>
+    <p>Question <span id="question-count">1</span> of 3</p>
+  </div>
+  <script src="script.js"></script>
+</html>
